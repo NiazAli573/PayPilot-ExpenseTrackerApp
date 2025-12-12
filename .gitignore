@@ -99,7 +99,18 @@ out/
 /nbbuild/
 /dist/
 /nbdist/
-/.nb-gradle/
+
+# Database files
+*.db
+*.dat
+
+# Generated reports
+expense_report_*.txt
+
+# Data directory (except .gitkeep)
+data/*
+!data/.gitkeep
+
 
 # VS Code
 .vscode/
