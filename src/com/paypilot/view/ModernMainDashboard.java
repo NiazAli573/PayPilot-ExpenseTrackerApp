@@ -102,10 +102,10 @@ public class ModernMainDashboard extends JFrame {
         logoPanel.setOpaque(false);
         logoPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
         
-        // Logo icon
-        JLabel logoIcon = new JLabel("💰");
+        // Logo icon - Wallet is more relatable to finance/expense tracking
+        JLabel logoIcon = new JLabel("💼");
         logoIcon.setFont(new Font("Roboto", Font.BOLD, 48));
-        logoIcon.setForeground(UITheme.SUCCESS);
+        logoIcon.setForeground(new Color(96, 165, 250)); // Light blue
         logoIcon.setAlignmentX(Component.LEFT_ALIGNMENT);
         
         JLabel appTitle = new JLabel("PayPilot");
@@ -169,31 +169,57 @@ public class ModernMainDashboard extends JFrame {
     }
 
     private JButton createMenuButton(String text, java.awt.event.ActionListener action) {
-        JButton btn = new JButton(text);
-        btn.setFont(new Font("Roboto", Font.PLAIN, 15));
-        btn.setForeground(new Color(229, 231, 235)); // Brighter text for visibility
-        btn.setBackground(new Color(31, 41, 55));
+        RoundedButton btn = new RoundedButton(text);
+        btn.setFont(new Font("Roboto", Font.BOLD, 15));
+        btn.setForeground(new Color(209, 213, 219)); // Light gray text for dark sidebar
+        btn.setBackground(new Color(45, 55, 72)); // Dark background
         btn.setMaximumSize(new Dimension(220, 44));
         btn.setAlignmentX(Component.LEFT_ALIGNMENT);
         btn.setHorizontalAlignment(SwingConstants.LEFT);
         btn.setBorder(new EmptyBorder(10, 16, 10, 16));
         btn.setFocusPainted(false);
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        btn.setOpaque(true);
         
         btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btn.setBackground(new Color(55, 65, 81));
+                btn.setBackground(new Color(59, 130, 246)); // Light blue on hover
                 btn.setForeground(Color.WHITE);
+                btn.repaint();
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btn.setBackground(new Color(31, 41, 55));
-                btn.setForeground(new Color(229, 231, 235));
+                btn.setBackground(new Color(45, 55, 72)); // Back to dark
+                btn.setForeground(new Color(209, 213, 219));
+                btn.repaint();
             }
         });
         
         btn.addActionListener(action);
         return btn;
+    }
+    
+    // Custom rounded button class for sidebar menu
+    private class RoundedButton extends JButton {
+        private int cornerRadius = 12;
+        
+        public RoundedButton(String text) {
+            super(text);
+            setOpaque(false);
+            setContentAreaFilled(false);
+            setBorderPainted(false);
+        }
+        
+        @Override
+        protected void paintComponent(Graphics g) {
+            Graphics2D g2 = (Graphics2D) g.create();
+            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            
+            // Fill rounded rectangle
+            g2.setColor(getBackground());
+            g2.fillRoundRect(0, 0, getWidth(), getHeight(), cornerRadius, cornerRadius);
+            
+            g2.dispose();
+            super.paintComponent(g);
+        }
     }
 
     private JButton createTextButton(String text, java.awt.event.ActionListener action) {

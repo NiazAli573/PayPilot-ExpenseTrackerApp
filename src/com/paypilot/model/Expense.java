@@ -5,8 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
- * Expense Model - Represents a personal expense
- * Encapsulation: Private fields with controlled access
+ * Represents a personal expense
  */
 public class Expense implements Serializable {
     private static final long serialVersionUID = 1L;

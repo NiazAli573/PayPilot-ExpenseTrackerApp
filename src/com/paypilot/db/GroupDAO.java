@@ -7,8 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * GroupDAO - Data Access Object for Group operations
- * SRP: Handles only group and shared expense persistence
+ * Data Access Object for Group operations
  */
 public class GroupDAO {
     private static final String GROUPS_KEY = "groups";

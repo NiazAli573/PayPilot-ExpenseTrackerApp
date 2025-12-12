@@ -1,11 +1,9 @@
-// CREATE THIS FILE: com/paypilot/controller/DeleteExpenseCommand.java
 package com.paypilot.controller;
 
 import com.paypilot.model. Expense;
 
 /**
- * Command to delete an expense with undo support
- * Encapsulates delete operation as an object
+ * Command to delete an expense
  */
 public class DeleteExpenseCommand implements Command {
     private ExpenseManager expenseManager;

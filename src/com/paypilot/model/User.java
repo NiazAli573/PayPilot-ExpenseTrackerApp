@@ -4,8 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * User Model - Represents a user in the system
- * Encapsulation: Private fields with getters/setters
+ * Represents a user in the system
  */
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;

@@ -5,9 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * UserDAO - Data Access Object for User operations
- * SRP: Handles only user persistence
- * Encapsulation: Hides storage implementation details
+ * Data Access Object for User operations
  */
 public class UserDAO {
     private static final String USERS_KEY = "users";

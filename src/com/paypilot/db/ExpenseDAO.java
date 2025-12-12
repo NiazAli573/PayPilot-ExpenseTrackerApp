@@ -4,9 +4,7 @@ import com.paypilot.model.Expense;
 import java.util.ArrayList;
 
 /**
- * ExpenseDAO - Data Access Object for Expense operations
- * SRP: Handles only expense persistence
- * Encapsulation: Hides storage implementation details
+ * Data Access Object for Expense operations
  */
 public class ExpenseDAO {
     private DatabaseManager dbManager;

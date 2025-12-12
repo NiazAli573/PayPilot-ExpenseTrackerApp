@@ -5,12 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * SINGLETON PATTERN - DatabaseManager
- * Problem Solved: Centralized DB access & single connection management
- * Benefit: Prevents multiple conflicting connection initializations
- * 
- * SRP: Single responsibility - database operations only
- * Thread-safe singleton implementation
+ * Singleton DatabaseManager for centralized data access
  */
 public class DatabaseManager {
     private static DatabaseManager instance;

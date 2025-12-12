@@ -1,4 +1,3 @@
-// CREATE THIS FILE: com/paypilot/controller/AuthenticationController.java
 package com.paypilot.controller;
 
 import com.paypilot.dao. UserDAO;
@@ -7,9 +6,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * AuthenticationController - Handles user authentication
- * SRP: Single responsibility - user authentication only
- * Facade: Simplifies authentication operations for UI
+ * Handles user authentication
  */
 public class AuthenticationController {
     private UserDAO userDAO;
@@ -64,7 +61,6 @@ public class AuthenticationController {
     
     /**
      * Hash password using SHA-256
-     * Encapsulation: Hides hashing implementation
      */
     private String hashPassword(String password) {
         try {

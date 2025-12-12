@@ -1,11 +1,9 @@
-// CREATE THIS FILE: com/paypilot/controller/AddExpenseCommand.java
 package com.paypilot.controller;
 
 import com.paypilot.model. Expense;
 
 /**
- * Command to add an expense with undo support
- * Encapsulates add operation as an object
+ * Command to add an expense
  */
 public class AddExpenseCommand implements Command {
     private ExpenseManager expenseManager;
