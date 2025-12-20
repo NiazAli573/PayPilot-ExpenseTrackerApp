@@ -105,16 +105,19 @@
 
 ### Dashboard
 Modern dashboard with real-time statistics and expense tracking.
+
 <img width="1357" height="714" alt="image" src="https://github.com/user-attachments/assets/703829ce-73ef-4315-8507-a480a8a4d84e" />
 
 
 ### Analytics
 Visual charts showing spending patterns and category distribution.
+
 <img width="1365" height="720" alt="image" src="https://github.com/user-attachments/assets/93ae1646-ce39-46a0-bd80-f3e8ac6ff7d3" />
 
 
 ### Budget Tracker
 Monitor your spending against set budgets with color-coded progress bars.
+
 <img width="1365" height="722" alt="image" src="https://github.com/user-attachments/assets/e03b4a63-d083-4ee5-a5f7-b39c92df6bd0" />
 
 
