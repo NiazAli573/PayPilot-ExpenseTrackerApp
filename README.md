@@ -412,7 +412,7 @@ If you encounter any issues or have questions:
 ---
 
 <div align="center">
-  <p>Made with ❤️ by Niaz Ali</p>
+  <p>Made by Niaz Ali</p>
   <p>⭐ Star this repository if you find it helpful!</p>
 </div>
 
